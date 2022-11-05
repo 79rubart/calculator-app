@@ -1,0 +1,33 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    width: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-theme {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.theme {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+#range {
+    width: 50px;
+}
+
+#visor {
+    width: 100%;
+}
+
+.board {
+    text-align: center;
+    margin: 1em 0;
+}
