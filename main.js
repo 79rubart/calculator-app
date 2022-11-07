@@ -1,14 +1,34 @@
-const keyList = document.querySelectorAll('.key');
-var visor = document.querySelector('#visor').value;
+  //
+var equals = document.querySelector('#equals');
+  // The textfield element
+var visor = document.getElementById("visor");
+  // The reset button
+var resetBtn = document.getElementById("reset");
+  // Get all the buttons to an Array
+var buttons = document.getElementsByClassName("key");
 
-for (let count = 0; count < keyList.length; count++) {
-
-    const key = keyList[count];
-    const keyNumbersOperator = key.classList[1];
-    const keyArray = ["7","8","9","DEL","4","5","6","+","1","2","3","-",".","0","/","x","RESET","="];
-    keyNumbersOperator === keyArray;
-    
-    key.onclick = function(){
-        visor === keyNumbersOperator;
-    }
+function numbersAndOperators() {
+    // Add click event listener to all button elements and insert their inner text as value to the text field
+    Array.prototype.forEach.call (buttons, (button) => {
+      button.addEventListener("click", () => {
+        visor.value += button.innerText
+      })
+    })
+  
+    // Add click event listener to reset button
+    resetBtn.addEventListener("click", () => {
+      visor.value = null
+    })
 }
+
+equals.addEventListener('click', function(){
+    if (visor.value.split('+')){
+        visor.value = visor.value.split('+').reduce((a,c) => a + Number(c), 0);
+    }
+    //if (visor.value.split('-')){
+        //visor.value = visor.value.split('-').reduce((a,c) => a - Number(c), 0);
+    //}
+});
+
+
+document.addEventListener("DOMContentLoaded", numbersAndOperators);
