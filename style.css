@@ -23,7 +23,7 @@ body {
     width: 50px;
 }
 
-#visor {
+#visor-current, #visor-previous {
     width: 100%;
 }
 
