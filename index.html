@@ -7,14 +7,30 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <title>Calculator App</title>
 </head>
 <body>
   <div class="title-theme">
-    <div><h1>Calc</h1></div>
-    <div class="theme"><p>Theme</p><input type="range" min="0" max="2" id="range"></div>
+    <div>
+      <p class="title">calc</p>
+    </div>
+    <div class="theme">
+      <div class="theme-t">
+        <p class="p-theme">Theme</p>
+      </div>
+      <div class="theme-range">
+        <div class="theme-amount">
+          <p>1</p><p>2</p><p>3</p>
+        </div>
+        <input type="range" min="0" max="2" id="range">
+      </div>
+    </div>
   </div>
-  <input type="text" id="visor">
+  <div class="screens">
+    <input type="text" class="screen2" id="visor2" readonly>
+    <input type="text" class="screen" id="visor" readonly>
+  </div>
   <div class="keyboard">
     <div class="row">
       <button class="key key_7">7</button><button class="key key_8">8</button><button class="key key_9">9</button><button class="key_DEL" id="del" >DEL</button>
