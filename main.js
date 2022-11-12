@@ -10,6 +10,11 @@ var divide = document.getElementById("divide");
 var delBtn = document.getElementById("del");
 
 function numbersAndOperators() {
+
+  let aConst = 0;
+  let bConst = 0;
+  let sign = "";
+
     Array.prototype.forEach.call (buttons, (button) => {
       button.addEventListener("click", () => {
         visor.value += button.innerText
@@ -20,25 +25,52 @@ function numbersAndOperators() {
       visor2.value = null;
     })
 
+    subtract.addEventListener('click', function(){
+      sign = "-"
+      aConst = parseFloat(visor.value);
+      visor2.value = aConst + "-";
+      visor.value = null;
+    })
+
     plus.addEventListener('click', function(){
-      visor2.value = visor.value;
+      sign = "+"
+      aConst = parseFloat(visor.value);
+      visor2.value = aConst + "+";
+      visor.value = null;
+    })
+
+    multiply.addEventListener('click', function(){
+      sign = "*"
+      aConst = parseFloat(visor.value);
+      visor2.value = aConst + "*";
+      visor.value = null;
+    })
+
+    divide.addEventListener('click', function(){
+      sign = "/"
+      aConst = parseFloat(visor.value);
+      visor2.value = aConst + "/";
       visor.value = null;
     })
 
     equalsBtn.addEventListener('click', function(){
-      if (visor2.value.split('-')){
-        visor.value = visor2.value.split('-').slice(1).reduce((a, c) => parseFloat(a) - parseFloat(c), (visor.value.split('-')[0]));
+      if (sign === "-"){
+        bConst = parseFloat(visor.value);
+        visor.value = aConst - bConst;
       }
-      if (visor2.value.split('+')){
-        visor.value = visor2.value.split('+').slice(1).reduce((a) => parseFloat(a) + parseFloat(visor.value), (visor2.value.split('+')[0]));
-        visor2.value = null;
+      if (sign === "+"){
+        bConst = parseFloat(visor.value);
+        visor.value = aConst + bConst;
       }
-      if (visor.value.split('*')){
-        visor.value = visor.value.split('*').slice(1).reduce((a, c) => parseFloat(a) * parseFloat(c), (visor.value.split('*')[0]));
+      if (sign === "*"){
+        bConst = parseFloat(visor.value);
+        visor.value = aConst * bConst;
       }
-      if (visor.value.split('/')){
-        visor.value = visor.value.split('/').slice(1).reduce((a, c) => parseFloat(a) / parseFloat(c), (visor.value.split('/')[0]));
+      if (sign === "/"){
+        bConst = parseFloat(visor.value);
+        visor.value = aConst / bConst;
       }
+      visor2.value = null;
     })
 
     delBtn.addEventListener('click', function(){
