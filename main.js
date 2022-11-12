@@ -8,6 +8,7 @@ var subtract = document.getElementById("subtract");
 var multiply = document.getElementById("multiply");
 var divide = document.getElementById("divide");
 var delBtn = document.getElementById("del");
+var themeToggle = document.getElementById("toggle");
 
 function numbersAndOperators() {
 
@@ -77,5 +78,9 @@ function numbersAndOperators() {
         visor.value = visor.value.substr(0, visor.value.length - 1);
     })
 }
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('theme2');
+})
 
 document.addEventListener("DOMContentLoaded", numbersAndOperators);

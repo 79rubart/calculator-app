@@ -11,6 +11,7 @@ body {
     --title-color: #ffffff;
     --theme-button: #d04238;
     --theme-active-button: #f86b61;
+    --theme-button-bg: #252d44;
     --input-color: #181f32;
     --input-text-color: #ffffff;
     --keyboard-bg-color: #262c46;
@@ -32,7 +33,9 @@ body.theme2 {
     --title-color: #34342a;
     --theme-button: #d45300;
     --theme-active-button: #ff8733;
+    --theme-button-bg: #d0ced1;
     --input-color: #eeeeee;
+    --input-text-color: #34342a;
     --keyboard-bg-color: #d3cdcd;
     --button-bg-color: #e5e4e0;
     --button-number-color: #34342a;
@@ -52,6 +55,7 @@ body.theme3 {
     --title-color: #fedf37;
     --theme-button: #00ddcd;
     --theme-active-button: #91fff9;
+    --theme-button-bg: #1e0836;
     --input-color: #1e0836;
     --keyboard-bg-color: #1e0836;
     --button-bg-color: #331b4d;
@@ -114,9 +118,34 @@ body.theme3 {
     margin: 0 0.4em;
 }
 
-#range {
+#toggle {
     -webkit-appearance: none;
-    width: 50px;
+    position: relative;
+    width: 70px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    background-color: var(--theme-button-bg);
+    background-size: cover;
+}
+
+#toggle::before {
+    content:"";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: var(--theme-button);
+    border-radius: 50px;
+}
+
+#toggle:checked:before {
+    transform: translate(100%);
+}
+
+#toggle:checked {
+    background-color: var(--theme-button-bg);
 }
 
 .screens {
