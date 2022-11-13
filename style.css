@@ -150,38 +150,38 @@ body.theme3 {
 
 .screens {
     margin: 0 0 0.5em 0;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .screen2 {
-    font-size: 16px;
+    font-size: 32px;
     font-family: 'League Spartan';
+    text-align: right;
     color: var(--input-text-color);
-    padding: 0.5em;
+    padding: 0.5em 0.5em 0 0.5em;
     background-color: var(--input-color);
     border: none;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    width: 103.4%;
     outline: none;
 }
 
 .screen {
     font-size: 32px;
     font-family: 'League Spartan';
+    text-align: right;
     color: var(--input-text-color);
     padding: 0.5em;
     background-color: var(--input-color);
     border: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    width: 100%;
     outline: none;
 }
 
 .keyboard {
-    text-align: center;
-    width: 100%;
-    padding: 0.5em;
+    padding: 0.5em 0 0.5em 0.5em;
     background-color: var(--keyboard-bg-color);
     border-radius: 5px;
 }
@@ -223,25 +223,43 @@ body.theme3 {
     border-radius: 5px;
 }
 
-.key_reset, #del {
+#reset {
     background-color: var(--button-del-reset-color);
     box-shadow: 0px 2px var(--button-del-reset-shadow-color);
-
     color: var(--button-del-reset-text-color);
     cursor: pointer;
 }
 
-.key_reset:active, #del:active {
+#del {
+    background-color: var(--button-del-reset-color);
+    box-shadow: 0px 2px var(--button-del-reset-shadow-color);
+    color: var(--button-del-reset-text-color);
+    cursor: pointer;
+}
+
+#reset:active, #del:active {
     background-color: var(--button-del-reset-active-color);
 }
 
-.key_equals {
+#equals {
     background-color: var(--button-equal-color);
     box-shadow: 0px 2px var(--button-equal-shadow-color);
     color: var(--button-del-reset-text-color);
     cursor: pointer;
 }
 
-.key_equals:active {
+#equals:active {
     background-color: var(--button-equal-active-color);
+}
+
+.attribution {
+    margin: 1em 0 0 0;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        width: auto;
+        padding: 0.2em;
+    }
 }
