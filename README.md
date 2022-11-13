@@ -1,6 +1,6 @@
 # Frontend Mentor - Calculator app
 
-![Design preview for the Calculator app coding challenge](https://github.com/79rubart/to-do-list-app/blob/master/assets/images/calculator.PNG)
+![Design preview for the Calculator app coding challenge](https://github.com/79rubart/calculator-app/blob/master/assets/images/calculator.PNG)
 
 This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29).
 
