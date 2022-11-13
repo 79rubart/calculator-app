@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Deploy: [Vercel link](https://your-live-site-url.com)
+- Deploy: [Vercel link](https://calculator-app-79rubart.vercel.app/)
 
 ## My process
 
